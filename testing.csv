@@ -1,0 +1,51 @@
+,code,comment
+0,"void leftRotate(int arr[], int d, int n)
+{
+for (int i = 0; i < d; i++)
+int i, temp;
+temp = arr[0];
+for (i = 0; i < n - 1; i++)
+arr[i] = arr[i + 1];
+arr[n-1] = temp;
+}",Function to left rotate arr[] of size n by d
+1,"void printArray(int arr[], int size)
+{
+ int i;
+ for (i = 0; i < size; i++)
+ System.out.print(arr[i] );",function to print an array
+2,"/nstatic int countRotations(int arr[], int n){
+int min = arr[0], min_index = -1;
+for (int i = 0; i < n; i++)
+{
+if (min > arr[i])
+{
+min = arr[i];
+min_index = i;
+}
+}
+return min_index
+}","Returns count of rotations for anarray which is first sorted in ascending order, then rotated"
+3,"static void rvereseArray(int arr[],int start, int end)
+{
+int temp;
+while (start < end)
+{
+temp = arr[start];
+arr[start] = arr[end];
+arr[end] = temp;
+start++;
+end--;
+}
+}",Reverse an array from start to end
+4,"static void pushZerosToEnd(int arr[], int n)
+{
+int count = 0;
+for (int i = 0; i < n; i++)
+if (arr[i] != 0)
+arr[count++] = arr[i];
+while (count < n)
+arr[count++] = 0;}",Function which pushes all zeros to end of an array.
+5,"if (n == 1) {
+minmax.max = arr[0];
+minmax.min = arr[0];
+return minmax;}",If there is only one element then return it as min and max both
